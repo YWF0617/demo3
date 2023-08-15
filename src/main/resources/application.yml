@@ -1,0 +1,22 @@
+server:
+  port: 8086
+
+spring:
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost/Process?serverTimezone=GMT%2B8&characterEncoding=UTF-8&useSSL=false&allowMultiQueries=true
+    username: root
+    password: Qwerty66@$
+
+##日志格式
+#logging:
+#  pattern:
+#    console: "[%thread] %-5level %logger{36} - %msg%n"
+
+#自己写的mapper路径
+mybatis-plus:
+  configuration:
+    call-setters-on-nulls: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:/mapper/*Mapper.xml
